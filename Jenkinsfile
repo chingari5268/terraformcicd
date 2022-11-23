@@ -6,8 +6,8 @@ pipeline {
     }
     stages {
         stage(‘Checkout’) {
-			steps {
-				checkout([$class: ‘GitSCM’, branches: [[name: ‘*/master’]], extensions: [], userRemoteConfigs: [[url: ‘‘]]])
+	    steps {
+	        checkout([$class: ‘GitSCM’, branches: [[name: ‘*/master’]], extensions: [], userRemoteConfigs: [[url: ‘https://github.com/chingari5268/terraformcicd.git‘]]])
             }
         }
         stage ("terraform init") {
