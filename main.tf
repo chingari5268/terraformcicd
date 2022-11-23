@@ -1,20 +1,13 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "=3.0.0"
-    }
+provider "aws" {
+  region = "us-east-1"
+}
+
+
+resource "aws_s3_bucket" "b" {
+  bucket = "my-tf-test-bucket"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
   }
 }
-
-# Configure the Microsoft Azure Provider
-provider "azurerm" {
-  features {}
-}
-
-# Create a resource group
-resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
-  location = "West Europe"
-}
-
