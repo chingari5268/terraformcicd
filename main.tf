@@ -4,7 +4,7 @@ provider "aws" {
 
 # bucket.
 
-resource "aws_s3_bucket" "b" {
+resource "aws_s3_bucket" "bucket_s3" {
   bucket = "my-tf-test-bucket-cicd"
 
   tags = {
