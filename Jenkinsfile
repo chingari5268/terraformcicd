@@ -21,16 +21,6 @@ pipeline {
                 sh 'terraform init'
             }
         }
-        stage ("terraform fmt") {
-            steps {
-                sh 'terraform fmt'
-            }
-        }
-        stage ("terraform validate") {
-            steps {
-                sh 'terraform validate'
-            }
-        }
         stage ("terrafrom plan") {
             steps {
                 sh 'terraform plan '
