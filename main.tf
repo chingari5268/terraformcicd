@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "bucket_s3" {
   bucket = "my-tf-test-bucket-cicd"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "My bucket7"
     Environment = "prod"
   }
 }
