@@ -1,6 +1,5 @@
 provider "aws" {
   region = "us-east-1"
-  version = "1.4.4"
 }
 
 # bucket.
